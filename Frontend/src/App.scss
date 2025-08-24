@@ -1,0 +1,67 @@
+
+$color-fondo: #282c34;
+$color-link: #61dafb;
+$color-texto: white;
+$altura-logo: 40vmin;
+$espaciado-footer: 40px;
+
+.App {
+  text-align: center;
+
+  &-logo {
+    height: $altura-logo;
+    pointer-events: none;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+  &-header {
+    background-color: $color-fondo;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: $color-texto;
+  }
+
+  &-link {
+    color: $color-link;
+  }
+}
+
+
+.fondo-peliculas {
+  background-image: url('https://pplprs.co.uk/wp-content/uploads/Cinema-Background-Music.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: $espaciado-footer;
+  padding-bottom: $espaciado-footer;
+}
+
+
+$estado: danger;
+.alert-#{$estado} {
+  background-color: red;
+  color: white;
+  padding: 1rem;
+}
+
+$side: right;
+.margin-#{$side} {
+  margin-#{$side}: 10px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
